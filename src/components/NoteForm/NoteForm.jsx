@@ -20,9 +20,13 @@ export function NoteForm({ title, onClickEdit, onClickTrash, onSubmit }) {
     content: "",
   });
   const [formErrors, setFormErrors] = useState({
-    title: undefined,
-    content: undefined,
+    title: "",
+    content: "",
   });
+
+  function hasError() {
+    return Object.values(formErrors).some((error) => error !== undefined);
+  }
 
   function validate(fieldName, fieldValue) {
     setFormErrors({
@@ -84,7 +88,10 @@ export function NoteForm({ title, onClickEdit, onClickTrash, onSubmit }) {
   const submitButton = (
     <>
       <div className={s.submit_btn}>
-        <ButtonPrimary onClick={() => onSubmit(formValues)}>
+        <ButtonPrimary
+          isDisabled={hasError()}
+          onClick={() => onSubmit(formValues)}
+        >
           Submit
         </ButtonPrimary>
       </div>
