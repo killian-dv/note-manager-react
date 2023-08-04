@@ -17,9 +17,9 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} >
+          <Route path="/" element={<App />}>
             <Route path="/" element={<NoteBrowse />} />
-            <Route path="/note/:id" element={<Note />} />
+            <Route path="/note/:noteId" element={<Note />} />
             <Route path="/note/new" element={<NoteCreate />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
