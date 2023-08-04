@@ -1,5 +1,4 @@
 import { SearchBar } from "components/SearchBar/SearchBar";
-import s from "./style.module.css";
 import { NoteList } from "containers/NoteList/NoteList";
 import { useState } from "react";
 import { useSelector } from "react-redux";
