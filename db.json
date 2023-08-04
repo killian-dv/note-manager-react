@@ -53,6 +53,12 @@
       "content": "coucou",
       "created_at": "04/08/2023",
       "id": 13
+    },
+    {
+      "title": "test 2",
+      "content": "haha",
+      "created_at": "04/08/2023",
+      "id": 14
     }
   ]
 }
